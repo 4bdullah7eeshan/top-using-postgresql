@@ -1,16 +1,10 @@
 const { Router } = require("express");
+const usernameController = require("../controllers/usernameController");
 
 const indexRouter = Router();
 
-indexRouter.get("/", (req, res) => {
-    //res.render("pages/index", {  });
-    console.log("usernames will be logged here - wip")
-});
+indexRouter.get("/", usernameController.getUsernames);
 
-indexRouter.post("/new", (req, res) => {
-    //res.redirect("/");
-    console.log("username to be saved: ", req.body.username)
-
-});
+indexRouter.post("/new", usernameController.createUsernamePost);
 
 module.exports = indexRouter;
