@@ -7,4 +7,6 @@ indexRouter.get("/", usernameController.getUsernames);
 
 indexRouter.post("/new", usernameController.createUsernamePost);
 
+indexRouter.get("/delete", usernameController.deleteAllUsernames);
+
 module.exports = indexRouter;
